@@ -9,8 +9,8 @@ pipeline {
         NEXUSPASS = credentials('nexuspass')
     }
 
-    // as we tag the image which builds in stageing pppeline with timestamp, in prod deployment we need to provide correct 
-    // image tag. iwth parameters, we prompt the user to provide it.
+    // as we tag the image which builds in stageing pipeline with timestamp, in prod deployment we need to provide correct 
+    // image tag. with parameters, we prompt the user to provide it.
     stages {
         stage('Setup parameters') {
             steps {
