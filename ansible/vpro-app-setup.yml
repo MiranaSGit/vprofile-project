@@ -14,7 +14,7 @@
        - deploy
 
     - stat:
-        path: /usr/local/tomcat8/webapps/ROOT
+      path: /usr/local/tomcat8/webapps/ROOT
       register: artifact_stat
       tags:
        - deploy
