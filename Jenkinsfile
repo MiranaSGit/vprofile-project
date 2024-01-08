@@ -98,6 +98,7 @@ pipeline {
         }
 
         stage('Kubernetes Deploy') {
+            // Add KOPS EC2 machine to Jenkins as a node before this step...
 	        agent { label 'KOPS' }
             steps {
                 sh "helm upgrade --install --force vproifle-stack helm/vprofilecharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod"
